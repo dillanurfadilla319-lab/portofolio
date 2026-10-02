@@ -1830,9 +1830,10 @@
 
       <!-- Filter Controls -->
       <div class="filter-hud-bar">
-        <button class="hud-filter-btn active" onclick="filterProjects('all', this)">All Projects (04)</button>
+        <button class="hud-filter-btn active" onclick="filterProjects('all', this)">All Projects (05)</button>
         <button class="hud-filter-btn" onclick="filterProjects('hris', this)">Enterprise HRIS & Payroll</button>
-        <button class="hud-filter-btn" onclick="filterProjects('bloom', this)">E-Commerce & Hospitality (Laravel 12)</button>
+        <button class="hud-filter-btn" onclick="filterProjects('pos', this)">POS & Retail (Laravel 12)</button>
+        <button class="hud-filter-btn" onclick="filterProjects('bloom', this)">Cafe & Hospitality</button>
         <button class="hud-filter-btn" onclick="filterProjects('pakar', this)">Decision & Expert Systems</button>
         <button class="hud-filter-btn" onclick="filterProjects('gov', this)">Information Platforms</button>
       </div>
@@ -1949,7 +1950,116 @@
           </div>
         </article>
 
-        <!-- Project 1: Brew & Bloom Cafe (Full-Stack Showcase) -->
+        <!-- Project 1: POS Master — Sistem Kasir & Point of Sale (Flipped Layout) -->
+        <article class="celestial-card project-showcase-row flipped" data-category="pos">
+          <div class="card-prismatic-glare"></div>
+          <div class="project-mockup-col">
+            <div class="macbook-chassis">
+              <div class="macbook-hud-bar">
+                <div class="macbook-traffic-dots">
+                  <span class="m-dot m-dot-r"></span>
+                  <span class="m-dot m-dot-y"></span>
+                  <span class="m-dot m-dot-g"></span>
+                </div>
+                <div class="macbook-url-tab">https://pos.dilla.dev/cashier</div>
+              </div>
+              <div class="macbook-screen-core">
+                <!-- Image -->
+                <img id="img-pos" src="img/penjualan.png" alt="POS Master - Sistem Point of Sale" onerror="this.src='https://images.unsplash.com/photo-1556742049-0a67c5b8823b?q=80&w=800&auto=format&fit=crop'">
+
+                <!-- Floating < and > Arrows -->
+                <button class="screen-nav-arrow prev" onclick="navigateGallery('pos', -1)" aria-label="Previous image" title="Previous Image (❮)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="screen-nav-arrow next" onclick="navigateGallery('pos', 1)" aria-label="Next image" title="Next Image (❯)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+
+                <!-- Counter Badge -->
+                <div class="photo-counter-badge" id="counter-pos">📸 1 / 2</div>
+
+                <!-- Number tabs -->
+                <div class="screen-hud-controls" id="tabs-pos">
+                  <button class="screen-tab-btn active" onclick="setGallerySlide('pos', 0)">1</button>
+                  <button class="screen-tab-btn" onclick="setGallerySlide('pos', 1)">2</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dedicated Photo Navigation Bar Under Mockup -->
+            <div class="photo-bottom-control-bar">
+              <button class="photo-btn-step" onclick="navigateGallery('pos', -1)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                <span>❮ Prev Photo</span>
+              </button>
+              
+              <div class="photo-counter-tag">
+                <span id="bottom-counter-pos">Photo 1 of 2</span>
+              </div>
+
+              <button class="photo-zoom-trigger" onclick="openLightboxForProject('pos')">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span>Enlarge</span>
+              </button>
+
+              <button class="photo-btn-step" onclick="navigateGallery('pos', 1)">
+                <span>Next Photo ❯</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="project-detail-col">
+            <span class="project-sub-tag">Point of Sale & Retail Inventory Engine • Laravel 12</span>
+            <h3 class="project-title-name">POS Master — Sistem Point of Sale & Retail Management Berbasis Web</h3>
+            <p class="project-narrative-p">
+              Full-Stack Web Developer • <strong>Laravel 12 (PHP 8.2), SQLite/MySQL, Blade, Vanilla JS, Vite, DomPDF, Barcode Engine, SMTP Mailable</strong>.
+            </p>
+            <p style="font-size: 0.95rem; color: var(--text-pale); margin-bottom: 16px; line-height: 1.6;">
+              Aplikasi kasir dan manajemen retail point-of-sale modern berkinerja tinggi, cocok untuk bisnis retail/cafe dengan arsitektur checkout atomik, proteksi stok anti race-condition, integrasi barcode, dan laporan keuangan instan.
+            </p>
+            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; font-size: 0.94rem; color: var(--text-pale);">
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <span style="color: var(--aurora-cyan); font-weight: 800;">▹</span>
+                <span><strong>Atomic Checkout & Concurrency Locking:</strong> Seluruh alur checkout kasir dibungkus dalam <code>DB::transaction()</code> dan <code>lockForUpdate()</code> untuk menjamin integritas data dan mencegah race condition stok saat transaksi bersamaan.</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <span style="color: var(--aurora-cyan); font-weight: 800;">▹</span>
+                <span><strong>Omni-Channel POS & Receipt Generator:</strong> Modul kasir cepat dengan scan barcode, multi payment method (Cash, Transfer, QRIS), cetak struk instan PDF via <code>barryvdh/laravel-dompdf</code>, dan pengiriman invoice otomatis via email (SMTP Mailable).</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <span style="color: var(--aurora-cyan); font-weight: 800;">▹</span>
+                <span><strong>Real-time Stock Audit & Barcode Engine:</strong> Manajemen katalog produk dengan auto SKU, generate barcode SVG dinamis (<code>picqer/php-barcode-generator</code>), upload aset foto, manual adjustment stok, dan audit trail pergerakan stok.</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <span style="color: var(--aurora-cyan); font-weight: 800;">▹</span>
+                <span><strong>Executive Dashboard & Financial Reports:</strong> Visualisasi statistik harian, grafik revenue 7 hari, tracking top-selling items, notifikasi alert stok menipis, serta kalkulasi net profit dengan export CSV & PDF siap cetak.</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <span style="color: var(--aurora-cyan); font-weight: 800;">▹</span>
+                <span><strong>Multi-Role RBAC & Store Settings:</strong> Proteksi route berlapis (Admin & Kasir) via middleware, toggle status pengguna, manajemen profil toko, pengaturan mata uang, dan tarif pajak global.</span>
+              </li>
+            </ul>
+
+            <div class="project-pill-stack">
+              <span class="tech-spec-pill">Laravel 12</span>
+              <span class="tech-spec-pill">PHP 8.2</span>
+              <span class="tech-spec-pill">Atomic Checkout (lockForUpdate)</span>
+              <span class="tech-spec-pill">Barcode SVG Generator</span>
+              <span class="tech-spec-pill">DomPDF Thermal Receipt</span>
+              <span class="tech-spec-pill">Email Receipt (SMTP)</span>
+              <span class="tech-spec-pill">Stock Audit Trail</span>
+              <span class="tech-spec-pill">Financial CSV & PDF</span>
+              <span class="tech-spec-pill">RBAC Middleware</span>
+            </div>
+            <button class="btn-aurora btn-aurora-primary" style="padding: 10px 22px; font-size: 13.5px;" onclick="openLightboxForProject('pos')">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:6px;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>Inspect Screenshots (2)</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 2: Brew & Bloom Cafe (Full-Stack Showcase) -->
         <article class="celestial-card project-showcase-row" data-category="bloom">
           <div class="card-prismatic-glare"></div>
           <div class="project-mockup-col">
@@ -2720,6 +2830,10 @@
       'hris': [
         'img/hris/1.png'
       ],
+      'pos': [
+        'img/penjualan.png',
+        'img/penjualana2.png'
+      ],
       'bloom': [
         'img/blom/1.PNG',
         'img/blom/2.png',
@@ -2756,6 +2870,7 @@
 
     const currentGalleryIndices = {
       'hris': 0,
+      'pos': 0,
       'bloom': 0,
       'pakar': 0,
       'magang': 0
@@ -2828,6 +2943,7 @@
       if (modalCaption) {
         const titles = {
           'hris': 'Enterprise HRIS & Payroll Management System (Surabraja Putra)',
+          'pos': 'POS Master — Sistem Point of Sale & Retail Management Berbasis Web',
           'bloom': 'Brew & Bloom Cafe – Web Profile, Online Reservation & CMS',
           'pakar': 'Clinical Diagnostic Expert System (AHP & CF)',
           'magang': 'Annual Demographic Profiling System'

@@ -1830,13 +1830,124 @@
 
       <!-- Filter Controls -->
       <div class="filter-hud-bar">
-        <button class="hud-filter-btn active" onclick="filterProjects('all', this)">All Projects (03)</button>
+        <button class="hud-filter-btn active" onclick="filterProjects('all', this)">All Projects (04)</button>
+        <button class="hud-filter-btn" onclick="filterProjects('hris', this)">Enterprise HRIS & Payroll</button>
         <button class="hud-filter-btn" onclick="filterProjects('bloom', this)">E-Commerce & Hospitality (Laravel 12)</button>
         <button class="hud-filter-btn" onclick="filterProjects('pakar', this)">Decision & Expert Systems</button>
         <button class="hud-filter-btn" onclick="filterProjects('gov', this)">Information Platforms</button>
       </div>
 
       <div class="projects-stack-layout">
+
+        <!-- Project 0: Enterprise HRIS & Payroll Management System (Surabraja Putra) -->
+        <article class="celestial-card project-showcase-row" data-category="hris">
+          <div class="card-prismatic-glare"></div>
+          <div class="project-mockup-col">
+            <div class="macbook-chassis">
+              <div class="macbook-hud-bar">
+                <div class="macbook-traffic-dots">
+                  <span class="m-dot m-dot-r"></span>
+                  <span class="m-dot m-dot-y"></span>
+                  <span class="m-dot m-dot-g"></span>
+                </div>
+                <div class="macbook-url-tab">https://hris.surabrajaputra.com/portal</div>
+              </div>
+              <div class="macbook-screen-core">
+                <!-- Image -->
+                <img id="img-hris" src="img/hris/1.png" alt="Enterprise HRIS & Payroll Management System" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop'">
+
+                <!-- Floating < and > Arrows -->
+                <button class="screen-nav-arrow prev" onclick="navigateGallery('hris', -1)" aria-label="Previous image" title="Previous Image (❮)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="screen-nav-arrow next" onclick="navigateGallery('hris', 1)" aria-label="Next image" title="Next Image (❯)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+
+                <!-- Counter Badge -->
+                <div class="photo-counter-badge" id="counter-hris">📸 1 / 1</div>
+
+                <!-- Number tabs -->
+                <div class="screen-hud-controls" id="tabs-hris">
+                  <button class="screen-tab-btn active" onclick="setGallerySlide('hris', 0)">1</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dedicated Photo Navigation Bar Under Mockup -->
+            <div class="photo-bottom-control-bar">
+              <button class="photo-btn-step" onclick="navigateGallery('hris', -1)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                <span>❮ Prev Photo</span>
+              </button>
+              
+              <div class="photo-counter-tag">
+                <span id="bottom-counter-hris">Photo 1 of 1</span>
+              </div>
+
+              <button class="photo-zoom-trigger" onclick="openLightboxForProject('hris')">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span>Enlarge</span>
+              </button>
+
+              <button class="photo-btn-step" onclick="navigateGallery('hris', 1)">
+                <span>Next Photo ❯</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="project-detail-col">
+            <span class="project-sub-tag">Enterprise Resource Planning • HR & Employee Self-Service (ESS) Portal</span>
+            <h3 class="project-title-name">Enterprise HRIS & Payroll Management System (Surabraja Putra)</h3>
+            <p class="project-narrative-p">
+              Full-Stack Web Developer / Backend Developer • <strong>Laravel Framework (PHP 8.x), MySQL/MariaDB, Tailwind CSS, ZKTeco Biometrics, DomPDF, Maatwebsite Excel, WebPush API</strong>.
+            </p>
+            <p style="font-size: 0.95rem; color: var(--text-pale); margin-bottom: 16px; line-height: 1.6;">
+              Sistem Informasi Manajemen SDM dan Penggajian All-in-One yang dirancang untuk mengotomatisasi seluruh siklus lifecycle karyawan, absensi cerdas multi-metode, kalkulasi payroll multi-skema, evaluasi performa KPI, dan manajemen K3.
+            </p>
+            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; font-size: 0.94rem; color: var(--text-pale);">
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <span style="color: var(--aurora-cyan); font-weight: 800;">▹</span>
+                <span><strong>Core HR & Automated Legal Documents:</strong> Manajemen master data karyawan terpusat, pengajuan mutasi & offboarding resign bertingkat, serta otomatisasi generate dokumen legal resmi berformat PDF (PKWT/PKWTT, SP 1/2/3 dengan parameter pelanggaran, dan Paklaring).</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <span style="color: var(--aurora-cyan); font-weight: 800;">▹</span>
+                <span><strong>Smart Multi-Method Attendance & Hardware Sync:</strong> Presensi real-time terintegrasi langsung dengan mesin Biometrik Fingerprint ZKTeco (via direct network protocol SDK), Face Recognition, QR Code, dan Geolocation/GPS tracking log, didukung scheduling shift & pola jam kerja dinamis.</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <span style="color: var(--aurora-cyan); font-weight: 800;">▹</span>
+                <span><strong>Comprehensive Multi-Tier Payroll Engine:</strong> Kalkulator penggajian otomatis untuk 3 skema (Payroll Bulanan, Harian berbasis jam kerja aktual, & Motoris/Sales dengan uang makan dan sewa kendaraan), terintegrasi otomatis dengan potongan kasbon, lembur (overtime rate), serta export slip gaji PDF & rekapitulasi Excel akuntansi.</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <span style="color: var(--aurora-cyan); font-weight: 800;">▹</span>
+                <span><strong>Performance KPI, K3 & Whistleblowing:</strong> Modul rubrik penilaian KPI berkala antar divisi, pelaporan dan investigasi insiden kecelakaan kerja (K3), saluran aspirasi/whistleblowing internal, serta notifikasi pengumuman via WebPush langsung ke peramban karyawan.</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <span style="color: var(--aurora-cyan); font-weight: 800;">▹</span>
+                <span><strong>HR Analytics & High Scalability:</strong> Executive Dashboard untuk monitoring rasio absensi, headcount, gender, turnover, dan manpower budgeting yang dioptimalkan dengan indexing database relasional performa tinggi.</span>
+              </li>
+            </ul>
+
+            <div class="project-pill-stack">
+              <span class="tech-spec-pill">Laravel Framework</span>
+              <span class="tech-spec-pill">PHP 8.x</span>
+              <span class="tech-spec-pill">MySQL / MariaDB</span>
+              <span class="tech-spec-pill">ZKTeco Biometrics SDK</span>
+              <span class="tech-spec-pill">Face Recognition</span>
+              <span class="tech-spec-pill">GPS Geolocation</span>
+              <span class="tech-spec-pill">Multi-Tier Payroll</span>
+              <span class="tech-spec-pill">Laravel-DomPDF</span>
+              <span class="tech-spec-pill">Maatwebsite Excel</span>
+              <span class="tech-spec-pill">WebPush Notifications</span>
+              <span class="tech-spec-pill">Employee Portal (ESS)</span>
+            </div>
+            <button class="btn-aurora btn-aurora-primary" style="padding: 10px 22px; font-size: 13.5px;" onclick="openLightboxForProject('hris')">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:6px;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>Inspect Project Details</span>
+            </button>
+          </div>
+        </article>
 
         <!-- Project 1: Brew & Bloom Cafe (Full-Stack Showcase) -->
         <article class="celestial-card project-showcase-row" data-category="bloom">
@@ -2606,6 +2717,9 @@
 
     // 6. PROJECT GALLERIES & INTERACTIVE SLIDERS (< and > navigation)
     const projectGalleries = {
+      'hris': [
+        'img/hris/1.png'
+      ],
       'bloom': [
         'img/blom/1.PNG',
         'img/blom/2.png',
@@ -2641,12 +2755,13 @@
     };
 
     const currentGalleryIndices = {
+      'hris': 0,
       'bloom': 0,
       'pakar': 0,
       'magang': 0
     };
 
-    let activeLightboxProject = 'bloom';
+    let activeLightboxProject = 'hris';
 
     function navigateGallery(projKey, direction) {
       const list = projectGalleries[projKey];
@@ -2699,7 +2814,7 @@
 
     function openLightboxForProject(projKey) {
       activeLightboxProject = projKey;
-      const list = projectGalleries[projKey] || ['img/blom/7.PNG'];
+      const list = projectGalleries[projKey] || ['img/hris/1.png'];
       const idx = currentGalleryIndices[projKey] || 0;
       updateLightboxContent(projKey, idx);
       if (modal) modal.classList.add('active');
@@ -2712,6 +2827,7 @@
       if (modalImg) modalImg.src = list[idx];
       if (modalCaption) {
         const titles = {
+          'hris': 'Enterprise HRIS & Payroll Management System (Surabraja Putra)',
           'bloom': 'Brew & Bloom Cafe – Web Profile, Online Reservation & CMS',
           'pakar': 'Clinical Diagnostic Expert System (AHP & CF)',
           'magang': 'Annual Demographic Profiling System'
